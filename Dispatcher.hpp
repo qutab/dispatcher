@@ -5,7 +5,6 @@
 #include <cassert>
 #include <functional>
 #include <map>
-#include <tuple>
 
 template <typename Type>
 class Dispatcher

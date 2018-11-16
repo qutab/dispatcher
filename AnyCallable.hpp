@@ -2,9 +2,6 @@
 
 #include <any>
 #include <functional>
-#include <map>
-#include <string>
-#include <iostream>
 
 template<typename Ret>
 struct AnyCallable
@@ -53,7 +50,6 @@ struct AnyCallable<void>
     void operator()(Args&& ... args)
     {
         std::invoke(std::any_cast<std::function<void(Args...)>>(anyM), std::forward<Args>(args)...);
-
     }
 
     std::any anyM;

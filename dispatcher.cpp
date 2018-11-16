@@ -1,6 +1,6 @@
-#include <iostream>
-
 #include "Dispatcher.hpp"
+
+#include <iostream>
 
 void funcWithNoArg()
 {
@@ -11,7 +11,6 @@ void funcWithOneArg(int a)
 {
     std::cout << "funcWithOneArg: " << a << std::endl;
 }
-
 
 class Handler
 {
@@ -47,5 +46,5 @@ int main()
     dispatcher.dispatch(Status::STOP, 11, 21);
     dispatcher.dispatch(Status::EXIT, 22);
 
-	return 0;
+    return 0;
 }
